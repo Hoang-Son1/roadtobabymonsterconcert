@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HSC AI</title>
+</head>
+
+<body>
+
+<h2>Ask AI</h2>
+
+<textarea id="prompt" rows="6" cols="60"></textarea>
+<br><br>
+
+<button onclick="askAI()">Send</button>
+
+<h3>Response:</h3>
+<pre id="output">...</pre>
+
+<script>
+async function askAI() {
+
+    const prompt = document.getElementById("prompt").value;
+
+    const res = await fetch("http://127.0.0.1:8000/ask", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ prompt })
+    });
+
+    const data = await res.json();
+
+    document.getElementById("output").innerText = data.response;
+}
+</script>
+
+</body>
+</html>
