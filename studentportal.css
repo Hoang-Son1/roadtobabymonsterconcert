@@ -3756,6 +3756,7 @@ nav a{
       min-height: 150px;
       padding: 12px;
       font-size: 16px;
+      width: 100%;
       line-height: 1.5;
       outline: none;
       background: #fff;

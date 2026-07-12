@@ -760,11 +760,11 @@ function newsno5(){
 // Standard text formatting commands
 function execCmd(command) {
     document.execCommand(command, false, null);
-    document.getElementById('studentInput').focus();
+    document.getElementById('studentAnswer').focus();
 }
 // Insert simple plaintext math symbols at cursor position
 function insertText(text) {
-    document.getElementById('studentInput').focus();
+    document.getElementById('studentAnswer').focus();
     const selection = window.getSelection();
     if (!selection.rangeCount) return;
     
@@ -782,7 +782,7 @@ function insertText(text) {
 }
 // Insert structural HTML templates like fractions
 function insertHTML(type) {
-    document.getElementById('studentInput').focus();
+    document.getElementById('studentAnswer').focus();
     const selection = window.getSelection();
     if (!selection.rangeCount) return;
 
