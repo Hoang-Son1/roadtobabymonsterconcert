@@ -757,12 +757,6 @@ function newsno5(){
         x.style.display = "flex";
     }
 }
-
-
-
-
-
-
 // Standard text formatting commands
 function execCmd(command) {
     document.execCommand(command, false, null);
