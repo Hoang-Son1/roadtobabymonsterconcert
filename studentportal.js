@@ -19,7 +19,27 @@ document.onreadystatechange = function() {
         document.querySelector(
         "#loader").style.display = "none";
         document.body.style.overflow = 'visible';
+        initCalendar();
     }
+}
+
+function setVisibleMonth(index){
+    const monthLabels = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const monthContents = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+    monthLabels.forEach((id, i) => {
+        const label = document.getElementById(id);
+        const content = document.getElementById(monthContents[i]);
+        if (label) label.style.display = i === index ? 'block' : 'none';
+        if (content) content.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+function initCalendar(){
+    const today = new Date();
+    const monthIndex = today.getMonth();
+    const yearElement = document.querySelector('#year p');
+    if (yearElement) yearElement.textContent = today.getFullYear();
+    setVisibleMonth(monthIndex);
 }
 function back(){
     var A = document.getElementById("Jan");

@@ -15,6 +15,12 @@
             <img onclick="logo()" src="image/nav/sefton logo.png" alt="Logo">
         </div>
         <div class="navto">
+            <div id="nav10" class="navlink">
+                <a href="#dashboard">Dashboard</a>
+            </div>
+            <div id="nav11" class="navlink">
+                <a href="#practice">Upload</a>
+            </div>
             <div id="nav2" class="navlink">
                 <a href="#timetable">Calendar</a>
             </div>
@@ -53,7 +59,114 @@
         </div>
     </nav>
     <div class="body">
-        <div id="timetable" class="timetable">
+
+        <div id="dashboard" class="dashboard">
+            <div class="dashboard1">
+                <div class="dashboard1a">
+                    <p>Dashboard</p>
+                </div>
+            </div>
+            <div class="dashboard2">
+                <div class="dashboard-summary-grid">
+                    <div class="dashboard-summary-card">
+                        <p class="summary-label">Homework Completion</p>
+                        <div class="summary-value">78%</div>
+                        <div class="radial-progress" style="--progress: 78;" data-label="78%"></div>
+                        <p class="summary-note">Higher than average homework completion rate</p>
+                    </div>
+                    <div class="dashboard-summary-card">
+                        <p class="summary-label">Student's Learning gap</p>
+                        <div class="summary-value">5 topics</div>
+                        <div class="gap-pill-grid">
+                            <span>Module 6</span>
+                            <span>Module 7</span>
+                            <span>Data visualisation</span>
+                            <span>Extended response</span>
+                        </div>
+                        <p class="summary-note">These areas need focused revision.</p>
+                    </div>
+                    <div class="dashboard-summary-card">
+                        <p class="summary-label">Class ranking</p>
+                        <div class="summary-value">1 / 1</div>
+                        <div class="bar-chart">
+                            <div class="bar-fill" style="width: 82%;"></div>
+                        </div>
+                        <p class="summary-note">First place 🏆</p>
+                    </div>
+                </div>
+                <div class="dashboard-chart-row">
+                    <div class="dashboard-chart-card">
+                        <h4>Skill strengths</h4>
+                        <div class="chart-row">
+                            <span>Content knowledge</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 92%;"></div></div>
+                            <span>92%</span>
+                        </div>
+                        <div class="chart-row">
+                            <span>Exam technique</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 74%;"></div></div>
+                            <span>74%</span>
+                        </div>
+                        <div class="chart-row">
+                            <span>Time management</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 68%;"></div></div>
+                            <span>68%</span>
+                        </div>
+                        <div class="chart-row">
+                            <span>Response structure</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 80%;"></div></div>
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-chart-card">
+                        <h4>To Do List</h4>
+                        <div class="study-list">
+                            <div class="study-item">
+                                <strong>Next week</strong>
+                                <p>Finish teaching Mod 8</p>
+                            </div>
+                            <div class="study-item">
+                                <strong>Week 1 Term 3</strong>
+                                <p>Trials Revision</p>
+                            </div>
+                            <div class="study-item">
+                                <strong>Week 2 Term 3</strong>
+                                <p>Minitests</p>
+                            </div>
+                            <div class="study-item">
+                                <strong>Week 3-5 Term 3</strong>
+                                <p>TRIALS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="practice" class="practice">
+            <div class="practice1">
+                <div class="practice1a">
+                    <p>Uploading Resources</p>
+                </div>
+            </div>
+            <div class="practice2">
+                <div class="practice-pane">
+                    <div class="classifier-card">
+                        <h3>HSC Syllabus Processing Engine</h3>
+                        <div class="classifier-section">
+                            <p><strong>Supported Formats:</strong> Images (.png, .jpg) or Full Trial Booklets (.pdf)</p>
+                            <form id="uploadForm" class="classifier-form">
+                                <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf" required>
+                                <input type="text" id="hintInput" placeholder="Optional Focus Hint (e.g., 2024 Barker Trial)">
+                                <button type="submit">Ingest & Map Syllabus Elements</button>
+                            </form>
+                            <h4>Processing Diagnostics Output:</h4>
+                            <pre id="output">System sitting idle. Awaiting exam document uploads...</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div id="timetable" class="timetable">
             <div class="date">      
                 <div onclick="back()" id="back" class="backandfourth">
                     <p>&#10094;</p>
@@ -74,7 +187,7 @@
                         <p id="Dec">December</p>
                     </div>
                     <div id="year">
-                        <p>2025</p>
+                        <p>2026</p>
                     </div>
                 </div>
                 <div onclick="next()" id="forward" class="backandfourth"> 
@@ -146,7 +259,6 @@
                     <p class="empty"></p>
                     <p onclick="zoom()">1</p>
                     <p onclick="zoom()">2</p>
-                   
                 </div>
                 <div class="week">
                     <p onclick="zoom()">3</p>
@@ -284,7 +396,7 @@
                     <p onclick="zoom()">20</p>
                 </div>
                 <div class="week">
-                    <p onclick="zoom()" id="today">21
+                    <p onclick="zoom4()" id="today">21
                         <br> <span>Today</span>
                     </p>
                     <p onclick="zoom()">22</p>
@@ -433,7 +545,7 @@
                     <p onclick="zoom()">9</p>
                     <p onclick="zoom()">10</p>
                     <p onclick="zoom()">11</p>
-                    <p onclick="zoom()">12</p>
+                     <p onclick="zoom4()" id="today">12<br> <span>Today</span></p>
                     <p onclick="zoom()">13</p>
                 </div>
                 <div class="week">
@@ -699,6 +811,78 @@
                     <p class="empty"></p>
                 </div>
             </div>
+            <div id="blank" class="zoom">
+                <div id="taskinput">
+                    <textarea placeholder="Type your task in here to keep you organised"></textarea>
+                </div>
+                <div onclick="zoom()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank2" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://www.jenn.ie/">Jennie's 1st studio album "Ruby" coming out 12AM KST</a></p>
+                </div>
+                <div onclick="zoom2()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank3" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://le-sserafim.lnk.to/HOT">Le sserafim's 5th mini album "Hot" coming out 1PM KST</a></p>                
+                </div>    
+                <div onclick="zoom3()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank4" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Math, Business Studies and Physics homework due today</a></p>
+                </div>
+                <div onclick="zoom4()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank5" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://nmixx.lnk.to/Fe3O4FORWARD">NMIXX's 4th extended playlist "Fe3O4: FORWARD" coming out 6PM EST</a></p>
+                </div>
+                <div onclick="zoom5()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank6" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://www.instagram.com/njz_official/">NJZ performing new music at COMPLEXCON HongKong</a></p>
+                </div>
+                <div onclick="zoom6()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank7" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Business Studies exam</a></p>
+                </div>
+                <div onclick="zoom7()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank8" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Math Advanced exam</a></p>
+                </div>
+                <div onclick="zoom8()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank9" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">English exam</a></p>
+                </div>
+                <div onclick="zoom9()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank10" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Visual Design Assignment due date</a></p>
+                </div>
+                <div onclick="zoom10()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank11" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Enterprise Computing Assignment due date</a></p>
+                </div>
+                <div onclick="zoom11()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank12" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://maps.app.goo.gl/fM4spE8tEQvyByBk8">Cross Country</a></p>
+                </div>
+                <div onclick="zoom12()" id="taskclose">&#10006;</div>
+            </div>
         </div>
         <div id="news" class="news">
             <div class="news1">
@@ -810,7 +994,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div>  
         <div id="library" class="library">
             <div class="library1">
                 <div class="library1a">

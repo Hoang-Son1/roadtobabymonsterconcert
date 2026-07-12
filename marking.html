@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Marking — HSC Syllabus Engine</title>
+    <style>
+body {
+    font-family: sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f4f6f8;
+    color: #333;
+}
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+button {
+    background: #0070f3;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background: #0051b3;
+}
+pre {
+    background: #1e1e1e;
+    color: #39ff14;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 13px;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+img {
+    max-width: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+/* ⭐ Question Browser Styling */
+#questionList .card {
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+#questionList .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
+}
+#moduleFilter, #topicFilter {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+#questionList img {
+    max-width: 200px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+
+    <h2>AI Marking — HSC Stage 6 Syllabus Engine</h2>
+    <div class="card">
+        <h3>Question Browser</h3>
+        <label><strong>Filter by Module:</strong></label>
+        <select id="moduleFilter">
+            <option value="">Loading modules...</option>
+        </select>
+        <label><strong>Filter by Topic:</strong></label>
+        <input type="text" id="topicFilter" placeholder="Enter topic keyword">
+        <button id="loadListBtn">Load Questions</button>
+        <div id="questionList"></div>
+    </div>
+
+    <div class="card">
+        <h3>Load a Question</h3>
+        <input type="number" id="questionIdInput" placeholder="Question ID">
+        <select id="questionTableInput">
+            <option value="classified_questions">Short Answer</option>
+            <option value="mcq_questions">MCQ</option>
+        </select>
+        <button id="loadQuestionBtn">Load Question</button>
+    </div>
+
+    <div class="card" id="questionView" style="display:none;">
+        <h3 id="questionText"></h3>
+        <p id="parentContext"></p>
+        <p id="marksPossible"></p>
+        <img id="stimulusImage" style="display:none;">
+        <h4>Your Answer:</h4>
+        <textarea id="studentAnswer" rows="6"></textarea><br><br>
+        <button id="submitAnswerBtn">Submit for Marking</button>
+    </div>
+    
+    <!-- ⭐ MARKING OUTPUT ⭐ -->
+    <h3>Marking Output:</h3>
+    <pre id="markingOutput">Awaiting marking...</pre>
+
+    <script src="marking.js"></script>
+</body>
+</html>
+

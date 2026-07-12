@@ -30,6 +30,15 @@
             <div id="nav8" class="navlink">
                 <a href="#map">School Diagram</a>                    
             </div>
+             <div id="nav9" class="navlink">
+                <a href="#dashboard">Dashboard</a>                    
+            </div>
+             <div id="nav10" class="navlink">
+                <a href="#information">Information</a>                    
+            </div>
+             <div id="nav11" class="navlink">
+                <a href="#practice">Practice</a>                    
+            </div>
         </div>
         <div class="settings">
             <div id="nav6" class="navpic">
@@ -70,7 +79,7 @@
                         <p id="Dec">December</p>
                     </div>
                     <div id="year">
-                        <p>2025</p>
+                        <p>2026</p>
                     </div>
                 </div>
                 <div onclick="next()" id="forward" class="backandfourth"> 
@@ -428,7 +437,7 @@
                     <p onclick="zoom()">9</p>
                     <p onclick="zoom()">10</p>
                     <p onclick="zoom()">11</p>
-                    <p onclick="zoom()">12</p>
+                     <p onclick="zoom4()" id="today">12<br> <span>Today</span></p>
                     <p onclick="zoom()">13</p>
                 </div>
                 <div class="week">
@@ -1340,214 +1349,399 @@
                 </div>
         </div>
         </div>
-
-
-
-
-
-
-
-
         <div id="dashboard" class="dashboard">
             <div class="dashboard1">
                 <div class="dashboard1a">
                     <p>Dashboard</p>
                 </div>
-                <div class="dashboard1b">
-                    <a href="dashboard.html">More</a>
-                </div>
             </div>
             <div class="dashboard2">
-                <div class="book">
-                    <a href="image/dashboard/dashboard1.jpg" download>
-                        <div class="book1">
-                            <img src="image/dashboard/dashboard1.jpg" alt="dashboard1">
+                <div class="dashboard-summary-grid">
+                    <div class="dashboard-summary-card">
+                        <p class="summary-label">Daily Studying Streak</p>
+                        <div class="summary-value">999 days</div>
+                        <div class="radial-progress" style="--progress: 78;" data-label="2h19m / 3h"></div>
+                        <p class="summary-note">Study 3 hours today to continue the streak</p>
+                    </div>
+                    <div class="dashboard-summary-card">
+                        <p class="summary-label">Learning gaps</p>
+                        <div class="summary-value">5 topics</div>
+                        <div class="gap-pill-grid">
+                            <span>Module 3</span>
+                            <span>Module 6</span>
+                            <span>Data response</span>
+                            <span>Extended response</span>
                         </div>
-                        <div class="book1">
-                            <p>NEW SENIOR MATHEMATICS ADVANCED</p>
+                        <p class="summary-note">These areas need focused revision.</p>
+                    </div>
+                    <div class="dashboard-summary-card">
+                        <p class="summary-label">Ranking</p>
+                        <div class="summary-value">1 / 167</div>
+                        <div class="bar-chart">
+                            <div class="bar-fill" style="width: 82%;"></div>
                         </div>
-                    </a>
+                        <p class="summary-note">Strong base but technique refinement is due.</p>
+                    </div>
                 </div>
-                <div class="book">
-                    <a href="image/dashboard/dashboard2.jpg" download>
-                        <div class="book1">
-                            <img src="image/dashboard/dashboard2.jpg" alt="dashboard2">
+                <div class="dashboard-chart-row">
+                    <div class="dashboard-chart-card">
+                        <h4>Skill strengths</h4>
+                        <div class="chart-row">
+                            <span>Content knowledge</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 92%;"></div></div>
+                            <span>92%</span>
                         </div>
-                        <div class="book1">
-                            <p>NEW SENIOR MATHEMATICS EXTENSION 1</p>
+                        <div class="chart-row">
+                            <span>Exam technique</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 74%;"></div></div>
+                            <span>74%</span>
                         </div>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="image/dashboard/dashboard3.jpg" download>
-                        <div class="book1">
-                            <img src="image/dashboard/dashboard3.jpg" alt="dashboard3">
+                        <div class="chart-row">
+                            <span>Time management</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 68%;"></div></div>
+                            <span>68%</span>
                         </div>
-                        <div class="book1">
-                            <p>BUSINESS STUDIES IN ACTION</p>
+                        <div class="chart-row">
+                            <span>Response structure</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 80%;"></div></div>
+                            <span>80%</span>
                         </div>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="image/dashboard/dashboard4.jpg" download>
-                        <div class="book1">
-                            <img src="image/dashboard/dashboard4.jpg" alt="dashboard4">
+                        <br><br>
+                        <h4>Screentime management</h4>
+                        <div class="chart-row">
+                            <span>Youtube</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 86%;"></div></div>
+                            <span>6h00m/7h00m</span>
                         </div>
-                        <div class="book1">
-                            <p>KOREAN FOR DUMMIES</p>
+                        <div class="chart-row">
+                            <span>Instagram</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 75%;"></div></div>
+                            <span>1h30m/2h00m</span>
                         </div>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="image/dashboard/dashboard5.jpg" download>
-                        <div class="book1">
-                            <img src="image/dashboard/dashboard5.jpg" alt="dashboard5">
+                        <div class="chart-row">
+                            <span>Facebook</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 67%;"></div></div>
+                            <span>1h00m/1h30m</span>
                         </div>
-                        <div class="book1">
-                            <p>INFORMATION PROCESSES AND TECHNOLOGY</p>
+                        <div class="chart-row">
+                            <span>Snapchat</span>
+                            <div class="chart-bar"><div class="chart-fill" style="width: 50%;"></div></div>
+                            <span>0h30m/1h00m</span>
                         </div>
-                    </a>
+                    </div>
+                    <div class="dashboard-chart-card">
+                        <h4>Personalised study guide</h4>
+                        <div class="study-list">
+                            <div class="study-item">
+                                <strong>Next week</strong>
+                                <p>Practice 3 past paper questions on Module 3.</p>
+                            </div>
+                            <div class="study-item">
+                                <strong>Focus</strong>
+                                <p>Review command terms and structure evidence-based answers.</p>
+                            </div>
+                            <div class="study-item">
+                                <strong>Technique drill</strong>
+                                <p>Time each response to improve pace and exam rhythm.</p>
+                            </div>
+                            <div class="study-item">
+                                <strong>Checkpoint</strong>
+                                <p>Revisit marked answers and update weak topic notes.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
         <div id="information" class="information">
             <div class="information1">
                 <div class="information1a">
                     <p>Information</p>
                 </div>
                 <div class="information1b">
-                    <a href="information.html">More</a>
                 </div>
             </div>
             <div class="information2">
-                <div class="book">
-                    <a href="image/information/information1.jpg" download>
-                        <div class="book1">
-                            <img src="image/information/information1.jpg" alt="information1">
-                        </div>
-                        <div class="book1">
-                            <p>NEW SENIOR MATHEMATICS ADVANCED</p>
-                        </div>
-                    </a>
+                <div class="information-table-card">
+                    <h3>HSC Directive Verbs</h3>
+                    <div class="information-table-wrap">
+                        <table class="information-table">
+                            <thead>
+                                <tr>
+                                    <th>HSC Directive Verb</th>
+                                    <th>Definition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Account</td><td>Account for: state reasons for, report on</td></tr>
+                                <tr><td>Analyse</td><td>Identify components and the relationship between them; draw out and relate implications</td></tr>
+                                <tr><td>Appreciate</td><td>Make a judgement about the value of</td></tr>
+                                <tr><td>Assess</td><td>Make a judgement of value, quality, outcomes, results or size</td></tr>
+                                <tr><td>Calculate</td><td>Ascertain/determine from given facts, figures or information</td></tr>
+                                <tr><td>Clarify</td><td>Make clear or plain</td></tr>
+                                <tr><td>Classify</td><td>Arrange or include in classes/categories</td></tr>
+                                <tr><td>Compare</td><td>Show how things are similar or different</td></tr>
+                                <tr><td>Construct</td><td>Make; build; put together items or arguments</td></tr>
+                                <tr><td>Contrast</td><td>Show how things are different or opposite</td></tr>
+                                <tr><td>Critically (analyse/evaluate)</td><td>Add a degree or level of accuracy depth, knowledge and understanding, logic, questioning, reflection and quality to (analyse/evaluate)</td></tr>
+                                <tr><td>Deduce</td><td>Draw conclusions</td></tr>
+                                <tr><td>Define</td><td>State meaning and identify essential qualities</td></tr>
+                                <tr><td>Demonstrate</td><td>Show by example</td></tr>
+                                <tr><td>Describe</td><td>Provide characteristics and features</td></tr>
+                                <tr><td>Discuss</td><td>Identify issues and provide points for and/or against</td></tr>
+                                <tr><td>Distinguish</td><td>Recognise or note/indicate as being distinct or different from; to note differences between</td></tr>
+                                <tr><td>Evaluate</td><td>Make a judgement based on criteria; determine the value of</td></tr>
+                                <tr><td>Examine</td><td>Inquire into</td></tr>
+                                <tr><td>Explain</td><td>Relate cause and effect; make the relationships between things evident; provide why and/or how</td></tr>
+                                <tr><td>Extract</td><td>Choose relevant and/or appropriate details</td></tr>
+                                <tr><td>Extrapolate</td><td>Infer from what is known</td></tr>
+                                <tr><td>Identify</td><td>Recognise and name</td></tr>
+                                <tr><td>Interpret</td><td>Draw meaning from</td></tr>
+                                <tr><td>Investigate</td><td>Plan, inquire into and draw conclusions about</td></tr>
+                                <tr><td>Justify</td><td>Support an argument or conclusion</td></tr>
+                                <tr><td>Outline</td><td>Sketch in general terms; indicate the main features of</td></tr>
+                                <tr><td>Predict</td><td>Suggest what may happen based on available information</td></tr>
+                                <tr><td>Propose</td><td>Put forward (for example a point of view, idea, argument, suggestion) for consideration or action</td></tr>
+                                <tr><td>Recall</td><td>Present remembered ideas, facts or experiences</td></tr>
+                                <tr><td>Recommend</td><td>Provide reasons in favour</td></tr>
+                                <tr><td>Recount</td><td>Retell a series of events</td></tr>
+                                <tr><td>Summarise</td><td>Express, concisely, the relevant details</td></tr>
+                                <tr><td>Synthesise</td><td>Putting together various elements to make a whole</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="book">
-                    <a href="image/information/information2.jpg" download>
-                        <div class="book1">
-                            <img src="image/information/information2.jpg" alt="information2">
+                <div class="information-card">
+                    <h3>Past Papers</h3>
+                    <div class="past-paper-list">
+                        <div class="past-paper-group">
+                            <div class="past-paper-group-title">Biology</div>
+                            <div class="past-paper-group-items">
+                                <a class="past-paper-item" href="/pastpaper/Bio 2025.pdf" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/biology.jpg" alt="Biology 2025"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Biology 2025</strong>
+                                        <p>HSC Biology</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="/pastpaper/Bio 2024.pdf" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/biology.jpg" alt="Biology 2024"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Biology 2024</strong>
+                                        <p>HSC Biology</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="/pastpaper/Bio 2023.pdf" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/biology.jpg" alt="Biology 2023"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Biology 2023</strong>
+                                        <p>HSC Biology</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="book1">
-                            <p>NEW SENIOR MATHEMATICS EXTENSION 1</p>
+                        <div class="past-paper-group">
+                            <div class="past-paper-group-title">Mathematics</div>
+                            <div class="past-paper-group-items">
+                                <a class="past-paper-item" href="/pastpaper/Maths 2025.pdf" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/maths.jpg" alt="Mathematics 2025"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Mathematics 2025</strong>
+                                        <p>HSC Mathematics Advanced</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="/pastpaper/Maths 2024.pdf" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/maths.jpg" alt="Mathematics 2024"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Mathematics 2024</strong>
+                                        <p>HSC Mathematics Advanced</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="/pastpaper/Maths 2023.pdf" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/maths.jpg" alt="Mathematics 2023"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Mathematics 2023</strong>
+                                        <p>HSC Mathematics Advanced</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                        <div class="past-paper-group">
+                            <div class="past-paper-group-title">Enterprise Computing</div>
+                            <div class="past-paper-group-items">
+                                <a class="past-paper-item" href="https://fam.hsconline.nesa.nsw.edu.au/" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/enterprise computing.jpg" alt="Enterprise Computing 2025"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Enterprise Computing 2025</strong>
+                                        <p>HSC Enterprise Computing</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="/pastpaper/Information Processes and Technology 2024.pdf" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/enterprise computing.jpg" alt="Enterprise Computing 2025"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Information Processes and Technology 2024</strong>
+                                        <p>HSC Information Processes and Technology since Enterprise Computing is a new subject</p>
+                                    </div>
+                                </a>
+                                 <a class="past-paper-item" href="/pastpaper/Information Processes and Technology 2023.pdf" download>
+                                    <div class="past-paper-thumb"><img src="image/subjects/enterprise computing.jpg" alt="Enterprise Computing 2025"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Information Processes and Technology 2023</strong>
+                                        <p>HSC Information Processes and Technology since Enterprise Computing is a new subject</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="book">
-                    <a href="image/information/information3.jpg" download>
-                        <div class="book1">
-                            <img src="image/information/information3.jpg" alt="information3">
+                <div class="information-card">
+                    <h3>Strategies</h3>
+                    <div class="past-paper-list">
+                        <div class="past-paper-group">
+                            <div class="past-paper-group-title">Studying techniques</div>
+                            <div class="past-paper-group-items">
+                                <a class="past-paper-item" href="https://www.youtube.com/watch?v=SAj6gAkCqsY">
+                                    <div class="past-paper-thumb"><img src="image/information/1.jpg" alt="Crammning"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Crammning</strong>
+                                        <p>An intensive, last-minute study strategy where a student attempts to memorize a large volume of information in a very short period right before an exam.</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="https://www.youtube.com/watch?v=aQ_xKuXo0D0">
+                                    <div class="past-paper-thumb"><img src="image/information/2.jpg" alt="Pomodoro"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Pomodoro</strong>
+                                        <p>A time management method where you study intensely for 25 minutes, followed by a 5-minute break.</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="https://www.youtube.com/watch?v=b3TF4-XRMqE">
+                                    <div class="past-paper-thumb"><img src="image/information/3.jpg" alt="Feynman Technique"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Feynman Technique</strong>
+                                        <p>A learning method where you explain a complex concept in simple language as if teaching it to a beginner to identify gaps in your understanding.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="book1">
-                            <p>BUSINESS STUDIES IN ACTION</p>
+                        <div class="past-paper-group">
+                            <div class="past-paper-group-title">Health managing</div>
+                            <div class="past-paper-group-items">
+                                <a class="past-paper-item" href="https://www.youtube.com/shorts/v4bDIdKaNMU">
+                                    <div class="past-paper-thumb"><img src="image/information/4.jpg" alt="20-20-20 Rule"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>20-20-20 Rule</strong>
+                                        <p>An eye-care habit where you look at something 20 feet away for 20 seconds every 20 minutes to reduce digital screen strain.</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="https://sleephub.com.au/what-is-the-circadian-rhythm/">
+                                    <div class="past-paper-thumb"><img src="image/information/5.jpg" alt="Circadian Sleep Window"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Circadian Sleep Window</strong>
+                                        <p>A rest strategy where you sleep for at least 6 continuous hours during consistent nighttime hours to consolidate memory.</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="https://www.youtube.com/watch?v=a5yYeBqySRk">
+                                    <div class="past-paper-thumb"><img src="image/information/6.jpg" alt="Glycemic Index Pairing"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Glycemic Index Pairing</strong>
+                                        <p>A nutrition method where you combine complex carbohydrates with healthy fats or proteins to maintain steady brain energy.</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </a>
+                        <div class="past-paper-group">
+                            <div class="past-paper-group-title">Procrasinating Prevention</div>
+                            <div class="past-paper-group-items">
+                                <a class="past-paper-item" href="https://www.tiktok.com/@melrobbins/video/7470565398413413662">
+                                    <div class="past-paper-thumb"><img src="image/information/7.jpg" alt="5-Second Rule"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>5-Second Rule</strong>
+                                        <p>A cognitive trigger technique where you count backwards from five to one to instantly push your brain into physical action before it can make excuses.</p>
+                                    </div>
+                                </a>
+                                <a class="past-paper-item" href="https://www.youtube.com/watch?v=yecHRig8Esg">
+                                    <div class="past-paper-thumb"><img src="image/information/8.jpg" alt="Temptation Bundling"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Temptation Bundling</strong>
+                                        <p>A productivity strategy where you link an action you need to do (like studying) with an action you want to do (like listening to music).</p>
+                                    </div>
+                                </a>
+                                 <a class="past-paper-item" href="https://www.youtube.com/watch?v=tlddeUri3GM">
+                                    <div class="past-paper-thumb"><img src="image/information/9.jpg" alt="Parkinson's Law Constraint"></div>
+                                    <div class="past-paper-meta">
+                                        <strong>Parkinson's Law Constraint</strong>
+                                        <p>A time-scarcity strategy where you deliberately assign an aggressively short deadline to a task to force your brain to focus only on the essentials.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="book">
-                    <a href="image/information/information4.jpg" download>
-                        <div class="book1">
-                            <img src="image/information/information4.jpg" alt="information4">
-                        </div>
-                        <div class="book1">
-                            <p>KOREAN FOR DUMMIES</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="image/information/information5.jpg" download>
-                        <div class="book1">
-                            <img src="image/information/information5.jpg" alt="information5">
-                        </div>
-                        <div class="book1">
-                            <p>INFORMATION PROCESSES AND TECHNOLOGY</p>
-                        </div>
-                    </a>
-                </div>
+                
             </div>
         </div>
-
-
         <div id="practice" class="practice">
             <div class="practice1">
                 <div class="practice1a">
                     <p>Practice</p>
                 </div>
-                <div class="practice1b">
-                    <a href="practice.html">More</a>
-                </div>
             </div>
             <div class="practice2">
-                <div class="book">
-                    <a href="image/practice/practice1.jpg" download>
-                        <div class="book1">
-                            <img src="image/practice/practice1.jpg" alt="practice1">
+                <div class="practice-pane">
+                    <div class="marking-card">
+                        <h3>AI Marking — HSC Stage 6 Syllabus Engine</h3>
+                        <div class="marking-section">
+                            <h4>Question Browser</h4>
+                            <label><strong>Filter by Module:</strong></label>
+                            <select id="moduleFilter">
+                                <option value="">Loading modules...</option>
+                            </select>
+                            <label><strong>Filter by Topic:</strong></label>
+                            <input type="text" id="topicFilter" placeholder="Enter topic keyword">
+                            <button type="button" id="loadListBtn">Load Questions</button>
+                            <div id="questionList"></div>
                         </div>
-                        <div class="book1">
-                            <p>NEW SENIOR MATHEMATICS ADVANCED</p>
+                        <div class="marking-section">
+                            <h4>Load a Question</h4>
+                            <input type="number" id="questionIdInput" placeholder="Question ID">
+                            <select id="questionTableInput">
+                                <option value="classified_questions">Short Answer</option>
+                                <option value="mcq_questions">MCQ</option>
+                            </select>
+                            <button type="button" id="loadQuestionBtn">Load Question</button>
                         </div>
-                    </a>
+                        <div class="marking-card" id="questionView" style="display:none;">
+                            <h4 id="questionText"></h4>
+                            <p id="parentContext"></p>
+                            <p id="marksPossible"></p>
+                            <img id="stimulusImage" style="display:none;">
+                            <h4>Your Answer:</h4>
+                            <textarea id="studentAnswer" rows="6"></textarea>
+                            <button type="button" id="submitAnswerBtn">Submit for Marking</button>
+                        </div>
+                        <div class="marking-output-block">
+                            <h4>Marking Output:</h4>
+                            <pre id="markingOutput">Awaiting marking...</pre>
+                        </div>
+                    </div>
                 </div>
-                <div class="book">
-                    <a href="image/practice/practice2.jpg" download>
-                        <div class="book1">
-                            <img src="image/practice/practice2.jpg" alt="practice2">
+                <div class="practice-pane">
+                    <div class="classifier-card">
+                        <h3>HSC Syllabus Processing Engine</h3>
+                        <div class="classifier-section">
+                            <p><strong>Supported Formats:</strong> Images (.png, .jpg) or Full Trial Booklets (.pdf)</p>
+                            <form id="uploadForm" class="classifier-form">
+                                <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf" required>
+                                <input type="text" id="hintInput" placeholder="Optional Focus Hint (e.g., 2024 Barker Trial)">
+                                <button type="submit">Ingest & Map Syllabus Elements</button>
+                            </form>
+                            <h4>Processing Diagnostics Output:</h4>
+                            <pre id="output">System sitting idle. Awaiting exam document uploads...</pre>
                         </div>
-                        <div class="book1">
-                            <p>NEW SENIOR MATHEMATICS EXTENSION 1</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="image/practice/practice3.jpg" download>
-                        <div class="book1">
-                            <img src="image/practice/practice3.jpg" alt="practice3">
-                        </div>
-                        <div class="book1">
-                            <p>BUSINESS STUDIES IN ACTION</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="image/practice/practice4.jpg" download>
-                        <div class="book1">
-                            <img src="image/practice/practice4.jpg" alt="practice4">
-                        </div>
-                        <div class="book1">
-                            <p>KOREAN FOR DUMMIES</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="image/practice/practice5.jpg" download>
-                        <div class="book1">
-                            <img src="image/practice/practice5.jpg" alt="practice5">
-                        </div>
-                        <div class="book1">
-                            <p>practice PROCESSES AND TECHNOLOGY</p>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
         <div id="newsno1" class="zoom1">
             <div id="taskinput">
                 <p>
@@ -1764,5 +1958,31 @@
             <p>Copyright© April 2025 https://hoang-son1.github.io/SchoolWebsite/index.html All Rights Reserved</p>
         </div>
     </div>
+    <script src="marking.js"></script>
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        if (uploadForm) {
+            uploadForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const out = document.getElementById('output');
+                out.textContent = 'Processing target asset document page by page via Local VLM architecture...';
+
+                const formData = new FormData();
+                formData.append('file', document.getElementById('fileInput').files[0]);
+                formData.append('ocr_hint', document.getElementById('hintInput').value);
+
+                try {
+                    const res = await fetch('http://127.0.0.1:8000/classify', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await res.json();
+                    out.textContent = JSON.stringify(data, null, 2);
+                } catch (err) {
+                    out.textContent = 'System Runtime Error: ' + err.message;
+                }
+            });
+        }
+    </script>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="parentportal.css">
     <link rel="icon" href="image/nav/sefton logo.png">
     <script src="parentportal.js"></script>
-    <title>Sefton</title>
+    <title>Parent Portal</title>
 </head>
 <body>
     <div id="loader" class="center"></div>
@@ -15,17 +15,20 @@
             <img onclick="logo()" src="image/nav/sefton logo.png" alt="Logo">
         </div>
         <div class="navto">
+            <div id="nav9" class="navlink">
+                <a href="#dashboard">Dashboard</a>
+            </div>
             <div id="nav2" class="navlink">
-                <a href="#timetable">Calendar</a>
+                <a href="#timetable">Child calendar</a>
             </div>
             <div id="nav3" class="navlink">
-                <a href="#news">News</a>
+                <a href="#news">Parent news</a>
             </div>
             <div id="nav4" class="navlink">
-                <a href="#report">Report</a>
+                <a href="#report">Reports</a>
             </div>
             <div id="nav5" class="navlink">
-                <a href="#entertainment">Permission/Payment</a>
+                <a href="#entertainment">Payments</a>
             </div>
             <div id="nav8" class="navlink">
                 <a href="#map">School Diagram</a>
@@ -50,7 +53,116 @@
         </div>
     </nav>
     <div class="body">
-        <div id="timetable" class="timetable">
+        <div id="dashboard" class="dashboard">
+            <div class="dashboard-header">
+                <h2>Parent dashboard</h2>
+                <p>Track your child’s progress, attendance, and upcoming school events.</p>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dash-card profile-card">
+                    <p class="card-title">Child profile</p>
+                    <p class="profile-name">Jung Ahyeon</p>
+                    <p class="profile-detail">Year 13 · Roll Call 13R7</p>
+                    <p class="profile-detail">Homeroom: A7</p>
+                </div>
+                <div class="dash-card stat-card">
+                    <p class="card-title">Attendance</p>
+                    <p class="stat-value">20.07%</p>
+                    <p class="stat-note">Extremely low attendance!!!</p>
+                </div>
+                <div class="dash-card stat-card">
+                    <p class="card-title">Behavior</p>
+                    <p class="stat-value">Good</p>
+                    <p class="stat-note">1 positive note, no concerns.</p>
+                </div>
+                <div class="dash-card stat-card">
+                    <p class="card-title">Performance</p>
+                    <p class="stat-value">A+</p>
+                    <p class="stat-note">Math: A+ · English: A+ · Science: A+</p>
+                </div>
+                <div class="dash-card progress-card">
+                    <p class="card-title">Overall progress</p>
+                    <p class="progress-percent">67%</p>
+                    <div class="progress-circle">
+                        <div class="progress-fill"></div>
+                        <span>67%</span>
+                    </div>
+                    <p class="stat-note">On track with current syllabus targets.</p>
+                </div>
+                <div class="dash-card gap-card">
+                    <p class="card-title">Learning gaps</p>
+                    <p class="progress-percent">5 topics</p>
+                    <div class="gap-list">
+                        <span class="gap-pill">Module 3</span>
+                        <span class="gap-pill">Module 6</span>
+                        <span class="gap-pill">Data response</span>
+                        <span class="gap-pill">Extended response</span>
+                    </div>
+                    <p class="stat-note">These areas need focused revision.</p>
+                </div>
+                <div class="dash-card strength-card">
+                    <p class="card-title">Strength score</p>
+                    <p class="progress-percent">82 / 100</p>
+                    <div class="linear-bar">
+                        <div class="linear-fill" style="width:82%"></div>
+                    </div>
+                    <p class="stat-note">Strong base but technique refinement is due.</p>
+                </div>
+                <div class="dash-card skill-card">
+                    <p class="card-title">Skill strengths</p>
+                    <div class="skill-row">
+                        <span>Content knowledge</span>
+                        <span>92%</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Exam technique</span>
+                        <span>74%</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width:74%"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Time management</span>
+                        <span>68%</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width:68%"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <span>Response structure</span>
+                        <span>80%</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                    </div>
+                </div>
+                <div class="dash-card guide-card">
+                    <p class="card-title">Personalised study guide</p>
+                    <div class="guide-item">
+                        <p class="guide-label">Next week</p>
+                        <p>Practice 3 past paper questions on Module 3.</p>
+                    </div>
+                    <div class="guide-item">
+                        <p class="guide-label">Focus</p>
+                        <p>Review command terms and structure evidence-based answers.</p>
+                    </div>
+                    <div class="guide-item">
+                        <p class="guide-label">Technique drill</p>
+                        <p>Time each response to improve pace and exam rhythm.</p>
+                    </div>
+                    <div class="guide-item">
+                        <p class="guide-label">Checkpoint</p>
+                        <p>Revisit marked answers and update weak topic notes.</p>
+                    </div>
+                </div>
+                <div class="dash-card stat-card goal-card">
+                    <p class="card-title">Term goal</p>
+                    <p class="stat-value">Finish 5 modules</p>
+                    <p class="stat-note">Focus revision on weak topics before exam week.</p>
+                </div>
+                <div class="dash-card upcoming-card">
+                    <p class="card-title">Upcoming</p>
+                    <p class="stat-value">Parent-teacher night</p>
+                    <p class="stat-note">Fri 12 Jul · 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+          <div id="timetable" class="timetable">
             <div class="date">      
                 <div onclick="back()" id="back" class="backandfourth">
                     <p>&#10094;</p>
@@ -71,7 +183,7 @@
                         <p id="Dec">December</p>
                     </div>
                     <div id="year">
-                        <p>2025</p>
+                        <p>2026</p>
                     </div>
                 </div>
                 <div onclick="next()" id="forward" class="backandfourth"> 
@@ -143,7 +255,6 @@
                     <p class="empty"></p>
                     <p onclick="zoom()">1</p>
                     <p onclick="zoom()">2</p>
-                   
                 </div>
                 <div class="week">
                     <p onclick="zoom()">3</p>
@@ -281,9 +392,7 @@
                     <p onclick="zoom()">20</p>
                 </div>
                 <div class="week">
-                    <p onclick="zoom()" id="today">21
-                        <br> <span>Today</span>
-                    </p>
+                    <p onclick="zoom4()" id="today">21<p>
                     <p onclick="zoom()">22</p>
                     <p onclick="zoom()">23</p>
                     <p onclick="zoom()">24</p>
@@ -430,7 +539,7 @@
                     <p onclick="zoom()">9</p>
                     <p onclick="zoom()">10</p>
                     <p onclick="zoom()">11</p>
-                    <p onclick="zoom()">12</p>
+                    <p onclick="zoom4()" id="today">12<br> <span>Today</span></p>
                     <p onclick="zoom()">13</p>
                 </div>
                 <div class="week">
@@ -696,11 +805,83 @@
                     <p class="empty"></p>
                 </div>
             </div>
+            <div id="blank" class="zoom">
+                <div id="taskinput">
+                    <textarea placeholder="Type your task in here to keep you organised"></textarea>
+                </div>
+                <div onclick="zoom()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank2" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://www.jenn.ie/">Jennie's 1st studio album "Ruby" coming out 12AM KST</a></p>
+                </div>
+                <div onclick="zoom2()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank3" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://le-sserafim.lnk.to/HOT">Le sserafim's 5th mini album "Hot" coming out 1PM KST</a></p>                
+                </div>    
+                <div onclick="zoom3()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank4" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Math, Business Studies and Physics homework due today</a></p>
+                </div>
+                <div onclick="zoom4()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank5" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://nmixx.lnk.to/Fe3O4FORWARD">NMIXX's 4th extended playlist "Fe3O4: FORWARD" coming out 6PM EST</a></p>
+                </div>
+                <div onclick="zoom5()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank6" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://www.instagram.com/njz_official/">NJZ performing new music at COMPLEXCON HongKong</a></p>
+                </div>
+                <div onclick="zoom6()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank7" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Business Studies exam</a></p>
+                </div>
+                <div onclick="zoom7()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank8" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Math Advanced exam</a></p>
+                </div>
+                <div onclick="zoom8()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank9" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">English exam</a></p>
+                </div>
+                <div onclick="zoom9()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank10" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Visual Design Assignment due date</a></p>
+                </div>
+                <div onclick="zoom10()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank11" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://classroom.google.com">Enterprise Computing Assignment due date</a></p>
+                </div>
+                <div onclick="zoom11()" id="taskclose">&#10006;</div>
+            </div>
+            <div id="blank12" class="zoom">
+                <div id="taskinput">
+                    <p><a href="https://maps.app.goo.gl/fM4spE8tEQvyByBk8">Cross Country</a></p>
+                </div>
+                <div onclick="zoom12()" id="taskclose">&#10006;</div>
+            </div>
         </div>
         <div id="news" class="news">
             <div class="news1">
                 <div class="news1a">
-                    <p>School news</p>
+                    <p>Parent news</p>
                 </div>
                 <div class="news1b">
                     <a href="parentnews.html">More</a>
@@ -752,7 +933,7 @@
         <div id="report" class="report">
             <div class="report1">
                 <div class="report1a">
-                    <p>School Reports</p>
+                    <p>Student reports</p>
                 </div>
                 <div class="report1b">
                     <p onclick="reportmore()">More</p>
@@ -805,7 +986,7 @@
             <div class="permissionnote">
                 <div class="permissionnote1">
                     <div class="permissionnote1a">
-                        <p>Permission note</p>
+                        <p>Permission & payments</p>
                     </div>
                     <div class="permissionnote1b">
                         <p onclick="permissionnotemore()">More</p>
@@ -868,7 +1049,7 @@
                 
                 <div class="payment1">
                     <div class="payment1a">
-                        <p>Payment</p>
+                        <p>Outstanding payments</p>
                     </div>
                     <div class="payment1b">
                         <p onclick="paymentmore()">More</p>

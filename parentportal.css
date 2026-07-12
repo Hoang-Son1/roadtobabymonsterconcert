@@ -226,14 +226,201 @@ nav a{
     margin-top: 1.5%;
     color: rgba(0, 0, 0, 0.8);
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 0% 5% 10% 5%;
     flex-wrap: wrap;
+    column-gap: 5vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 5% 10% 5%;
     box-sizing: border-box;
-    row-gap: 10vh;
+    row-gap: 8vh;
     z-index: 0;
+}
+.dashboard{
+    width: 100%;
+    background: #eef4fb;
+    border-radius: 25px;
+    padding: 2% 3%;
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.dashboard-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.dashboard-header h2{
+    margin: 0;
+    font-size: 2.5em;
+    color: #1a3f6b;
+}
+.dashboard-header p{
+    margin: 0;
+    font-size: 1.1em;
+    color: #31445a;
+}
+.dashboard-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 1rem;
+}
+.dash-card{
+    background: white;
+    border-radius: 22px;
+    padding: 1.5rem;
+    min-height: 160px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.profile-card{
+    grid-column: span 2;
+}
+.card-title{
+    margin: 0 0 1rem;
+    font-size: 1.25em;
+    color: #1a3f6b;
+    letter-spacing: 0.01em;
+}
+.profile-name{
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #0f2a45;
+}
+.profile-detail,
+.stat-note{
+    margin: 0.75rem 0 0;
+    color: #5c6a78;
+    line-height: 1.5;
+}
+.stat-value{
+    margin: 0;
+    font-size: 3rem;
+    color: #1a3f6b;
+    font-weight: 700;
+}
+.stat-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.progress-card, .gap-card, .strength-card, .skill-card, .guide-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.progress-percent{
+    margin: 0;
+    font-size: 3rem;
+    color: #1a3f6b;
+    font-weight: 700;
+}
+.progress-circle{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 1rem auto;
+    border-radius: 50%;
+    background: conic-gradient(#1a73e8 0 78%, #eef4fb 78% 100%);
+    display: grid;
+    place-items: center;
+}
+.progress-fill{
+    display: none;
+}
+.progress-circle span{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f2a45;
+}
+.gap-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.gap-pill{
+    background: #e8f2ff;
+    color: #12457f;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+}
+.linear-bar{
+    height: 1rem;
+    width: 100%;
+    background: #e6ecf7;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+.linear-fill{
+    height: 100%;
+    background: #1a73e8;
+}
+.skill-row{
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.9rem;
+}
+.skill-row span:first-child{
+    font-weight: 600;
+    color: #223248;
+}
+.skill-row span:nth-child(2){
+    color: #31445a;
+    font-weight: 700;
+}
+.skill-bar{
+    width: 100%;
+    height: 0.8rem;
+    background: #e6ecf7;
+    border-radius: 999px;
+    overflow: hidden;
+}
+.skill-fill{
+    height: 100%;
+    background: #1a73e8;
+}
+.guide-item{
+    background: #f6fbff;
+    border-radius: 18px;
+    padding: 1rem;
+    margin-bottom: 0.9rem;
+}
+.guide-label{
+    margin: 0 0 0.35rem;
+    font-weight: 700;
+    color: #1a3f6b;
+}
+.guide-item p:last-child{
+    margin: 0;
+    color: #455a72;
+    line-height: 1.5;
+}
+@media screen and (max-width: 1200px){
+    .dashboard-grid{
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+@media screen and (max-width: 760px){
+    .dashboard{
+        padding: 1.5rem;
+    }
+    .dashboard-grid{
+        grid-template-columns: 1fr;
+    }
+    .profile-card{
+        grid-column: auto;
+    }
 }
 @media screen and (max-width: 1000px){
     .body{
@@ -370,13 +557,13 @@ nav a{
     background-color: #F88379;
     border: 1px solid black;
 }
-#Jan, #Feb, #Mar, #May, #Jun, #Jul, #Aug, #Sep, #Oct, #Nov, #Dec{
+#Jan, #Feb, #Mar, #Apr, #May, #Jun, #Aug, #Sep, #Oct, #Nov, #Dec{
     display: none;
 }
-#january, #february, #march, #may, #june, #july, #august, #september, #october, #november, #december{
+#january, #february, #march, #april, #may, #june, #august, #september, #october, #november, #december{
     display: none;
 }
-#Apr, #april{
+#Jul, #july{
     display: block;
 }
 .zoom{
