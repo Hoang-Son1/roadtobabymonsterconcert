@@ -2934,10 +2934,6 @@ nav a{
 
 
 
-
-
-
-
 .dashboard{
     height: fit-content;
     width: 90%;
@@ -2948,6 +2944,22 @@ nav a{
     border-radius: 25px;
     word-break: break-word;
     hyphens: auto!important;
+}
+.study-item{
+    transition: transform 0.25s;
+}
+.study-item:hover{
+    transform: scale(1.15);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.dashboard span{
+    transition: transform 0.25s;
+}
+.dashboard span:hover{
+    transform: scale(1.15);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
 }
 .dashboard1{
     height: fit-content;
@@ -3151,6 +3163,14 @@ nav a{
     z-index: 0;
     border-radius: 25px;
     word-break: break-word;
+}
+.information a{
+    transition: transform 0.25s;
+}
+.information a:hover{
+    transform: scale(1.15);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
 }
 .information1{
     height: fit-content;
@@ -3685,3 +3705,84 @@ nav a{
     right: 0;
     margin: auto;
 }
+
+
+
+
+
+
+
+
+
+.editor-container {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .toolbar {
+      background-color: #f7f9fa;
+      border-bottom: 1px solid #ccc;
+      padding: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .toolbar-group {
+      display: flex;
+      gap: 2px;
+      border-right: 1px solid #ddd;
+      padding-right: 6px;
+      margin-right: 2px;
+    }
+
+    .toolbar-group:last-child {
+      border-right: none;
+    }
+
+    button {
+      background: white;
+      border: 1px solid #ccd0d4;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+    }
+
+    button:hover {
+      background-color: #f0f2f4;
+      border-color: #b5bcc2;
+    }
+
+    /* Target the editable field */
+    .rich-input {
+      min-height: 150px;
+      padding: 12px;
+      font-size: 16px;
+      line-height: 1.5;
+      outline: none;
+      background: #fff;
+      color:black;
+    }
+
+    .rich-input:focus {
+      background: #fff;
+    }
+
+    /* Styles inside the input to render fractions nicely */
+    .fraction {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.85em;
+      padding: 0 2px;
+    }
+    .num { border-bottom: 1px solid #333; padding-bottom: 1px; }
+    .den { padding-top: 1px; }

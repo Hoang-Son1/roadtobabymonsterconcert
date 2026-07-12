@@ -757,3 +757,57 @@ function newsno5(){
         x.style.display = "flex";
     }
 }
+
+
+
+
+
+
+// Standard text formatting commands
+function execCmd(command) {
+    document.execCommand(command, false, null);
+    document.getElementById('studentInput').focus();
+}
+// Insert simple plaintext math symbols at cursor position
+function insertText(text) {
+    document.getElementById('studentInput').focus();
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+    
+    const range = selection.getRangeAt(0);
+    range.deleteContents();
+    
+    const textNode = document.createTextNode(text);
+    range.insertNode(textNode);
+    
+    // Move cursor right after the newly inserted text
+    range.setStartAfter(textNode);
+    range.setEndAfter(textNode);
+    selection.removeAllRanges();
+    selection.addRange(range);
+}
+// Insert structural HTML templates like fractions
+function insertHTML(type) {
+    document.getElementById('studentInput').focus();
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    range.deleteContents();
+
+    let htmlString = '';
+    if (type === 'fraction') {
+    // Creates an editable top and bottom fraction layer
+    htmlString = '<span class="fraction" contenteditable="false"><span class="num" contenteditable="true">x</span><span class="den" contenteditable="true">y</span></span>&nbsp;';
+    }
+
+    const div = document.createElement('div');
+    div.innerHTML = htmlString;
+    const fragment = document.createDocumentFragment();
+    let child;
+    while ((child = div.firstChild)) {
+    fragment.appendChild(child);
+    }
+    
+    range.insertNode(fragment);
+}

@@ -269,6 +269,22 @@ nav a{
     word-break: break-word;
     hyphens: auto!important;
 }
+.study-item{
+    transition: transform 0.25s;
+}
+.study-item:hover{
+    transform: scale(1.15);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.dashboard span{
+    transition: transform 0.25s;
+}
+.dashboard span:hover{
+    transform: scale(1.15);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
 .dashboard1{
     height: fit-content;
     width: 90%;

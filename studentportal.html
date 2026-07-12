@@ -1716,7 +1716,44 @@
                             <p id="marksPossible"></p>
                             <img id="stimulusImage" style="display:none;">
                             <h4>Your Answer:</h4>
-                            <textarea id="studentAnswer" rows="6"></textarea>
+                            <!-- <textarea id="studentAnswer" rows="6"></textarea> -->
+                            <div class="editor-container">
+                            <!-- Toolbar with categorized student functions -->
+                            <div class="toolbar">
+                            <!-- Text Layout Group -->
+                            <div class="toolbar-group">
+                                <button onclick="execCmd('bold')" title="Bold"><b>B</b></button>
+                                <button onclick="execCmd('underline')" title="Underline"><u>U</u></button>
+                                <button onclick="execCmd('italic')" title="Italic"><i>I</i></button>
+                            </div>
+
+                            <!-- Scripting Group (Chemistry/Algebra) -->
+                            <div class="toolbar-group">
+                                <button onclick="execCmd('subscript')" title="Subscript (Chemistry: H₂O)"><sub>X₂</sub></button>
+                                <button onclick="execCmd('superscript')" title="Superscript (Algebra: X²)"><sup>X²</sup></button>
+                            </div>
+
+                            <!-- Quick Math Symbols -->
+                            <div class="toolbar-group">
+                                <button onclick="insertText(' ± ')" title="Plus-Minus">±</button>
+                                <button onclick="insertText(' √ ')" title="Square Root">√</button>
+                                <button onclick="insertText(' π ')" title="Pi">π</button>
+                                <button onclick="insertText(' θ ')" title="Theta">θ</button>
+                                <button onclick="insertText(' Δ ')" title="Delta">Δ</button>
+                            </div>
+
+                            <!-- Math Operators -->
+                            <div class="toolbar-group">
+                                <button onclick="insertText(' × ')" title="Multiply">×</button>
+                                <button onclick="insertText(' ÷ ')" title="Divide">÷</button>
+                                <button onclick="insertText(' ≠ ')" title="Not Equal">≠</button>
+                                <button onclick="insertHTML('fraction')" title="Insert Fraction">½</button>
+                            </div>
+                            </div>
+
+    <!-- The Editable Box -->
+    <div id="studentInput" class="rich-input" contenteditable="true"></div>
+                            </div>
                             <button type="button" id="submitAnswerBtn">Submit for Marking</button>
                         </div>
                         <div class="marking-output-block">
@@ -1926,6 +1963,38 @@
             <div onclick="newsno5()" id="taskclose">&#10006;</div>
         </div>    
     </div>
+    <!-- <div class="editor-container">
+        <!-- Toolbar with categorized student functions -->
+        <div class="toolbar">
+        <!-- Text Layout Group -->
+        <div class="toolbar-group">
+            <button onclick="execCmd('bold')" title="Bold"><b>B</b></button>
+            <button onclick="execCmd('underline')" title="Underline"><u>U</u></button>
+            <button onclick="execCmd('italic')" title="Italic"><i>I</i></button>
+        </div>
+        <!-- Scripting Group (Chemistry/Algebra) -->
+        <div class="toolbar-group">
+            <button onclick="execCmd('subscript')" title="Subscript (Chemistry: H₂O)"><sub>X₂</sub></button>
+            <button onclick="execCmd('superscript')" title="Superscript (Algebra: X²)"><sup>X²</sup></button>
+        </div>
+        <!-- Quick Math Symbols -->
+        <div class="toolbar-group">
+            <button onclick="insertText(' ± ')" title="Plus-Minus">±</button>
+            <button onclick="insertText(' √ ')" title="Square Root">√</button>
+            <button onclick="insertText(' π ')" title="Pi">π</button>
+            <button onclick="insertText(' θ ')" title="Theta">θ</button>
+            <button onclick="insertText(' Δ ')" title="Delta">Δ</button>
+        </div>
+        <div class="toolbar-group">
+            <button onclick="insertText(' × ')" title="Multiply">×</button>
+            <button onclick="insertText(' ÷ ')" title="Divide">÷</button>
+            <button onclick="insertText(' ≠ ')" title="Not Equal">≠</button>
+            <button onclick="insertHTML('fraction')" title="Insert Fraction">½</button>
+        </div>
+        </div>
+        <!-- The Editable Box -->
+        <div id="studentInput" class="rich-input" contenteditable="true"></div>
+    </div> -->
     <div class="footer">
         <div class="foot1">
             <div class="foota">

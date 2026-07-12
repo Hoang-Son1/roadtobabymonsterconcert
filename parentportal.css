@@ -244,6 +244,22 @@ nav a{
     box-sizing: border-box;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
+.guide-item{
+    transition: transform 0.25s;
+}
+.guide-item:hover{
+    transform: scale(1.15);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.dashboard span{
+    transition: transform 0.25s;
+}
+.dashboard span:hover{
+    transform: scale(1.15);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
 .dashboard-header{
     width: 100%;
     display: flex;

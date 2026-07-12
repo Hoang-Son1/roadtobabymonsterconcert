@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Rich Input Editor</title>
+  <style>    
+    .editor-container {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .toolbar {
+      background-color: #f7f9fa;
+      border-bottom: 1px solid #ccc;
+      padding: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .toolbar-group {
+      display: flex;
+      gap: 2px;
+      border-right: 1px solid #ddd;
+      padding-right: 6px;
+      margin-right: 2px;
+    }
+
+    .toolbar-group:last-child {
+      border-right: none;
+    }
+
+    button {
+      background: white;
+      border: 1px solid #ccd0d4;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+    }
+
+    button:hover {
+      background-color: #f0f2f4;
+      border-color: #b5bcc2;
+    }
+
+    /* Target the editable field */
+    .rich-input {
+      min-height: 150px;
+      padding: 12px;
+      font-size: 16px;
+      line-height: 1.5;
+      outline: none;
+      background: #fff;
+    }
+
+    .rich-input:focus {
+      background: #fff;
+    }
+
+    /* Styles inside the input to render fractions nicely */
+    .fraction {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.85em;
+      padding: 0 2px;
+    }
+    .num { border-bottom: 1px solid #333; padding-bottom: 1px; }
+    .den { padding-top: 1px; }
+  </style>
+</head>
+<body>
+
+  <h3>Student Notes & Math Input</h3>
+
+  <div class="editor-container">
+    <!-- Toolbar with categorized student functions -->
+    <div class="toolbar">
+      <!-- Text Layout Group -->
+      <div class="toolbar-group">
+        <button onclick="execCmd('bold')" title="Bold"><b>B</b></button>
+        <button onclick="execCmd('underline')" title="Underline"><u>U</u></button>
+        <button onclick="execCmd('italic')" title="Italic"><i>I</i></button>
+      </div>
+
+      <!-- Scripting Group (Chemistry/Algebra) -->
+      <div class="toolbar-group">
+        <button onclick="execCmd('subscript')" title="Subscript (Chemistry: H₂O)"><sub>X₂</sub></button>
+        <button onclick="execCmd('superscript')" title="Superscript (Algebra: X²)"><sup>X²</sup></button>
+      </div>
+
+      <!-- Quick Math Symbols -->
+      <div class="toolbar-group">
+        <button onclick="insertText(' ± ')" title="Plus-Minus">±</button>
+        <button onclick="insertText(' √ ')" title="Square Root">√</button>
+        <button onclick="insertText(' π ')" title="Pi">π</button>
+        <button onclick="insertText(' θ ')" title="Theta">θ</button>
+        <button onclick="insertText(' Δ ')" title="Delta">Δ</button>
+      </div>
+
+      <!-- Math Operators -->
+      <div class="toolbar-group">
+        <button onclick="insertText(' × ')" title="Multiply">×</button>
+        <button onclick="insertText(' ÷ ')" title="Divide">÷</button>
+        <button onclick="insertText(' ≠ ')" title="Not Equal">≠</button>
+        <button onclick="insertHTML('fraction')" title="Insert Fraction">½</button>
+      </div>
+    </div>
+
+    <!-- The Editable Box -->
+    <div id="studentInput" class="rich-input" contenteditable="true"></div>
+  </div>
+
+  <script>
+    // Standard text formatting commands
+    function execCmd(command) {
+      document.execCommand(command, false, null);
+      document.getElementById('studentInput').focus();
+    }
+
+    // Insert simple plaintext math symbols at cursor position
+    function insertText(text) {
+      document.getElementById('studentInput').focus();
+      const selection = window.getSelection();
+      if (!selection.rangeCount) return;
+      
+      const range = selection.getRangeAt(0);
+      range.deleteContents();
+      
+      const textNode = document.createTextNode(text);
+      range.insertNode(textNode);
+      
+      // Move cursor right after the newly inserted text
+      range.setStartAfter(textNode);
+      range.setEndAfter(textNode);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+
+    // Insert structural HTML templates like fractions
+    function insertHTML(type) {
+      document.getElementById('studentInput').focus();
+      const selection = window.getSelection();
+      if (!selection.rangeCount) return;
+
+      const range = selection.getRangeAt(0);
+      range.deleteContents();
+
+      let htmlString = '';
+      if (type === 'fraction') {
+        // Creates an editable top and bottom fraction layer
+        htmlString = '<span class="fraction" contenteditable="false"><span class="num" contenteditable="true">x</span><span class="den" contenteditable="true">y</span></span>&nbsp;';
+      }
+
+      const div = document.createElement('div');
+      div.innerHTML = htmlString;
+      const fragment = document.createDocumentFragment();
+      let child;
+      while ((child = div.firstChild)) {
+        fragment.appendChild(child);
+      }
+      
+      range.insertNode(fragment);
+    }
+  </script>
+
+</body>
+</html>
